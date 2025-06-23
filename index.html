@@ -113,6 +113,15 @@
           const { client_secret } = await res.json();
           if (!client_secret) throw new Error("無法取得 Stripe client_secret");
 
+
+           let jsonResponse;
+            try {
+              jsonResponse = await res.json();
+            } catch (error) {
+              throw new Error("回應不是有效的 JSON：" + error.message);
+            }
+
+          
           // Step 2: 用 client_secret 進行 confirmCardSetup
           const result = await stripe.confirmCardSetup(client_secret, {
             payment_method: {
