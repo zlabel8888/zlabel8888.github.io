@@ -49,7 +49,7 @@
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="whatsapp">WhatsApp 號碼 6</label>
+      <label for="whatsapp">WhatsApp 號碼 7</label>
       <input type="text" id="whatsapp" name="whatsapp" required />
 
       <label for="quantity">購買數量</label>
@@ -125,7 +125,7 @@
               throw new Error("回應不是有效的 JSON：" + error.message);
             }
 
-          
+          console.log(client_secret);
           // Step 2: 用 client_secret 進行 confirmCardSetup
           const result = await stripe.confirmCardSetup(client_secret, {
             payment_method: {
