@@ -49,7 +49,7 @@
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="whatsapp">WhatsApp 號碼 4</label>
+      <label for="whatsapp">WhatsApp 號碼 5</label>
       <input type="text" id="whatsapp" name="whatsapp" required />
 
       <label for="quantity">購買數量</label>
@@ -96,7 +96,7 @@
         try {
           // Step 1: 向 n8n 請求 SetupIntent
          const res = await fetch(
-            "https://zlabel88888.app.n8n.cloud/webhook/create-setup-intent",
+            "https://cors-anywhere.herokuapp.com/https://zlabel88888.app.n8n.cloud/webhook/create-setup-intent",
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
