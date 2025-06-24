@@ -104,6 +104,8 @@
             }
           );
 
+          console.log(res);
+
           if (!res.ok) {
             throw new Error(
               "無法取得res Stripe client_secret，狀態碼：" + res.status
